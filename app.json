@@ -1,8 +1,8 @@
 {
-  "name": "SmokerMusicX",
+  "name": "AIMusicX",
   "description": "Open-Source bot to play songs in your Telegram's Group Voice Chat. Powered by PyTgCalls.",
   "keywords": ["music", "voicechat", "telegram"],
-  "repository": "https://github.com/EsportMusicX/SmokerMusicX",
+  "repository": "https://github.com/LEGENDARY-OS/AIMusicX",
   "stack": "container",
   "env": {
     "SESSION_NAME": {
@@ -14,7 +14,7 @@
       "required": true
     },
     "BOT_NAME": {
-      "description": "Your MusicPlayer Bot Name.",
+      "description": "Your MusicPlayer Bot username without @.",
       "required": false,
       "value": ""
     },
@@ -31,9 +31,9 @@
       "required": true
     },
     "DURATION_LIMIT": {
-      "description": "Max audio duration limit for downloads (minutes).",
+      "description": "Max audio duration limit for downloads (minutes) i suggest 20-30 min.",
       "required": true,
-      "value": "10"
+      "value": "20"
     }
   }
 }
