@@ -35,13 +35,13 @@ We are tough:- [✨ 𝗝𝗼𝗶𝗻 ❤️🥀](https://t.me/Legend_K_Userbot)
 @Client.on_message(command(["repo"]) & filters.group & ~filters.edited)
 async def help(client: Client, message: Message):
     await message.reply_photo(
-        photo=f"https://te.legra.ph/file/bb7e6f59b3db29b215446.jpg",
+        photo=f"https://telegra.ph/file/8c3abf591121615cdef42.jpg",
         caption=f"""""",
         reply_markup=InlineKeyboardMarkup(
             [
                 [
                     InlineKeyboardButton(
-                        "💥 Cʟɪᴄᴋ Mᴇ Tᴏ Gᴇᴛ Rᴇᴘᴏ 💞", url=f"https://github.com/EsportMusicX/SmokerMusicX")
+                        "💥 Cʟɪᴄᴋ Mᴇ Tᴏ Gᴇᴛ Rᴇᴘᴏ 💞", url=f"https://github.com/LEGENDARY-OS/AIMusicX")
                 ]
             ]
         ),
