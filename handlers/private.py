@@ -15,9 +15,9 @@ async def start_(client: Client, message: Message):
 
 𝐂𝐫𝐞𝐚𝐭𝐨𝐫 :- [✨ 𝗠𝗿'Dhruba 🚬 💜](https://t.me/DhrubaXD)
 𝐒𝐮𝐩𝐩𝐨𝐫𝐭 :- [✨ Group ❤️🎸](https://t.me/Legend_K_Userbot)
-𝐃𝐢𝐬𝐜𝐮𝐬𝐬 :- [✨  Tough 𝗖𝗹𝗮𝗻 🎧](https://t.me/Legend_K_Userbot)
+Off topic :- [✨  Tough 𝗖𝗹𝗮𝗻 🎧](https://t.me/LB_OffTopic)
 𝐒𝐨𝐮𝐫𝐜𝐞  :- [✨  𝗖𝗹𝗶𝗰𝗸 ☑️ 𝗥𝗲𝗽𝗼 🌍](https://github.com/LEGENDARY-OS/AIMusicX)
-We are tough:- [✨ 𝗝𝗼𝗶𝗻 ❤️🥀](https://t.me/Legend_K_Userbot)
+Channel :- [✨ 𝗝𝗼𝗶𝗻 ❤️🥀](https://t.me/Official_K_LegendBot)
 
 𝐈𝐟 𝐘𝐨𝐮 𝐇𝐚𝐯𝐞 𝐀𝐧𝐲 𝐐𝐮𝐞𝐬𝐭𝐢𝐨𝐧𝐬 𝐀𝐧𝐝 𝐇𝐞𝐥𝐩 𝐓𝐡𝐞𝐧 𝐃𝐦 𝐌𝐲 𝐁𝐨𝐬𝐬 = [𝗠𝗿'Dhruba 🚬 ❤️](https://t.me/DhrubaXD)**""",
     reply_markup=InlineKeyboardMarkup(
