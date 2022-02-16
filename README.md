@@ -20,3 +20,7 @@
 
 
 
+### OUR MAIN MUSIC BOT DETAILS......
+- @Itscrazy_bot {(Main bot)add it to your group then make it admin}
+- Then add @K_4_king to your group (its not madnatory u can use the command /play then songs name..... the assistant will join automatically)
+- Regards @DhrubaXD
