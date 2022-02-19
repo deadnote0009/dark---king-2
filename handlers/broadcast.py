@@ -1,7 +1,3 @@
-# Copyright (C) 2021 By adityaProject
-# Copyright (C) 2022 By Legendary-os
-# Originally written by levina on github
-# Broadcast function
 
 
 import asyncio
