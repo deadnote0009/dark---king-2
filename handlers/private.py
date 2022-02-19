@@ -25,7 +25,8 @@ async def start_(client: Client, message: Message):
                 [
                     InlineKeyboardButton(
                         "👨‍💻 Support", url=f"https://t.me/Official_K_LegendBot")
-           
+               ],
+                [
                     InlineKeyboardButton(
                         "💝 Help 💝", url=f"https://t.me/Legend_K_Userbot")
                 ]
