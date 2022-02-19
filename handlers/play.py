@@ -23,6 +23,10 @@ from pytgcalls import StreamType
 from pytgcalls.types.input_stream import InputAudioStream
 from pytgcalls.types.input_stream import InputStream
 
+bot_username = os.environ.get("BOT_USERNAME", None)
+
+if "@" in bot_username:
+    bot_username.replace("@", "")
 
 def transcode(filename):
     ffmpeg.input(filename).output("input.raw", format='s16le', acodec='pcm_s16le', ac=2, ar='48k').overwrite_output().run() 
@@ -61,14 +65,14 @@ async def generate_cover(requested_by, title, views, duration, thumbnail):
                 await f.close()
 
 
-    image1 = Image.open("./background.png")
+    image1 = Image.open("etc/final.png")
     image2 = Image.open("etc/foreground.png")
     image3 = changeImageSize(1280, 720, image1)
     image4 = changeImageSize(1280, 720, image2)
     image5 = image3.convert("RGBA")
     image6 = image4.convert("RGBA")
     Image.alpha_composite(image5, image6).save("temp.png")
-    img = Image.open("temp.png")
+    img = Image.open("etc/final.png")
     draw = ImageDraw.Draw(img)
     font = ImageFont.truetype("etc/font.otf", 32)
     draw.text((190, 550), f"Title: {title}", (255, 255, 255), font=font)
@@ -118,7 +122,7 @@ async def play(_, message: Message):
                     invitelink = await _.export_chat_invite_link(chid)
                 except:
                     await lel.edit(
-                        "<b>𝐀𝐝 𝐌𝐞 😎 𝐀𝐬 𝐀𝐝𝐦𝐢𝐧 𝐎𝐟 𝐘𝐨𝐮𝐫 𝐆𝐫𝐨𝐮𝐩 💫  𝐅𝐢𝐫𝐬𝐭 ❰ ❤️  𝐌𝐮𝐬𝐢𝐜  lovers ❱</b>")
+                        "<b>𝐀𝐝 𝐌𝐞 😎 𝐀𝐬 𝐀𝐝𝐦𝐢𝐧 𝐎𝐟 𝐘𝐨𝐮𝐫 𝐆𝐫𝐨𝐮𝐩 💫</b>")
                     return
 
                 try:
@@ -130,7 +134,7 @@ async def play(_, message: Message):
                     pass
                 except Exception:
                     await lel.edit(
-                        f"<b>❰𝐅𝐥𝐨𝐨𝐝 😒 𝐖𝐚𝐢𝐭 𝐄𝐫𝐫𝐨𝐫  😔❱</b>\n𝐇𝐞𝐲 𝐀𝐬𝐬𝐢𝐬𝐭𝐚𝐧𝐭 🎸 𝐔𝐬𝐞𝐫𝐁𝐨𝐭 ❤️ 𝐂𝐨𝐮𝐥𝐝𝐧'𝐭 𝐉𝐨𝐢𝐧 𝐘𝐨𝐮𝐫 💫 𝐆𝐫𝐨𝐮𝐩  𝐃𝐮𝐞 𝐓𝐨 𝐇𝐞𝐚𝐯𝐲 𝐉𝐨𝐢𝐧 𝐑𝐞𝐐𝐮𝐞𝐬𝐭 🥀 . 𝐌𝐚𝐤𝐞 𝐒𝐮𝐫𝐞 𝐔𝐬𝐞𝐫𝐁𝐨𝐭 💫 𝐈𝐬 𝐍𝐨𝐭 𝐁𝐚𝐧𝐧𝐞𝐝 😔 𝐈𝐧 𝐆𝐫𝐨𝐮𝐩 🎸  𝐀𝐧𝐝 𝐓𝐫𝐲 𝐀𝐠𝐚𝐢𝐧 𝐋𝐚𝐭𝐞𝐫 𝐀𝐧𝐲 𝐇𝐞𝐥𝐩 𝐃𝐦 :- ✨ [❛-𝐌𝐫'Dhruba 🚬](https://t.me/DhrubaXD) ❤️🥀 :) ")
+                        f"<b>❰𝐅𝐥𝐨𝐨𝐝 😒 𝐖𝐚𝐢𝐭 𝐄𝐫𝐫𝐨𝐫  😔❱</b>\n𝐇𝐞𝐲 𝐀𝐬𝐬𝐢𝐬𝐭𝐚𝐧𝐭 🎸 𝐔𝐬𝐞𝐫𝐁𝐨𝐭 ❤️ 𝐂𝐨𝐮𝐥𝐝𝐧'𝐭 𝐉𝐨𝐢𝐧 𝐘𝐨𝐮𝐫 💫 𝐆𝐫𝐨𝐮𝐩  𝐃𝐮𝐞 𝐓𝐨 𝐇𝐞𝐚𝐯𝐲 𝐉𝐨𝐢𝐧 𝐑𝐞𝐐𝐮𝐞𝐬𝐭 🥀 . 𝐌𝐚𝐤𝐞 𝐒𝐮𝐫𝐞 𝐁𝐨𝐭 💫 𝐈𝐬 𝐍𝐨𝐭 𝐁𝐚𝐧𝐧𝐞𝐝 😔 𝐈𝐧 𝐆𝐫𝐨𝐮𝐩 🎸  𝐀𝐧𝐝 𝐓𝐫𝐲 𝐀𝐠𝐚𝐢𝐧 𝐋𝐚𝐭𝐞𝐫 𝐀𝐧𝐲 𝐇𝐞𝐥𝐩 𝐃𝐦 :- ✨ [❛-𝐌𝐫'Dhruba 🚬](https://t.me/DhrubaXD) ❤️🥀 :) ")
     try:
         await USER.get_chat(chid)
     except:
@@ -162,21 +166,21 @@ async def play(_, message: Message):
             [
                 [
                     InlineKeyboardButton(
-                            text=" 𝐂𝐡𝐚𝐧𝐧𝐞𝐥📡",
-                            url=f"https://t.me/Official_K_LegendBot")
-               ],
-               [
-                    InlineKeyboardButton(
-                            text="Dhruba",
+                            text="💝 Owner 💝",
                             url=f"https://t.me/DhrubaXD"),
                             
                     InlineKeyboardButton(
-                            text="Wr are tough 🥀",
-                            url=f"https://t.me/LB_OffTopic")
+                            text="👨‍💻 Assistant",
+                            url=f"https://t.me/{bot_username}")
+               ],
+                [
+                    InlineKeyboardButton(
+                            text="Support",
+                            url=f"https://t.me/Official_K_LegendBot")
                ],
                [
                         InlineKeyboardButton(
-                            text=" 𝐆𝐫𝐨𝐮𝐩⭐",
+                            text="🔰 Help 🔰",
                             url=f"https://t.me/Legend_K_Userbot")
                    
                 ]
@@ -215,21 +219,21 @@ async def play(_, message: Message):
             [
                 [
                     InlineKeyboardButton(
-                            text="Channel",
-                            url=f"https://t.me/Official_K_LegendBot")
-               ],
-               [
-                    InlineKeyboardButton(
-                            text="Dhruba",
+                            text="💝 Owner 💝",
                             url=f"https://t.me/DhrubaXD"),
                             
                     InlineKeyboardButton(
-                            text="We are tough🥀",
-                            url=f"https://t.me/LB_OffTopic")
+                            text="👨‍💻 Assistant",
+                            url=f"https://t.me/{bot_username}")
+               ],
+                [
+                    InlineKeyboardButton(
+                            text="Support",
+                            url=f"https://t.me/Official_K_LegendBot")
                ],
                [
                         InlineKeyboardButton(
-                            text="𝐆𝐫𝐨𝐮𝐩⭐",
+                            text="🔰 Help 🔰",
                             url=f"https://t.me/Legend_K_Userbot")
                    
                 ]
@@ -245,21 +249,21 @@ async def play(_, message: Message):
             [
                 [
                     InlineKeyboardButton(
-                            text="𝐂𝐡𝐚𝐧𝐧𝐞𝐥📡",
-                            url=f"https://t.me/Official_K_LegendBot")
-               ],
-               [
-                    InlineKeyboardButton(
-                            text="Dhruba🚬",
+                            text="💝 Owner 💝",
                             url=f"https://t.me/DhrubaXD"),
                             
                     InlineKeyboardButton(
-                            text="We are tough🥀",
-                            url=f"https://t.me/LB_OffTopic")
+                            text="👨‍💻 Assistant",
+                            url=f"https://t.me/{bot_username}")
+               ],
+                [
+                    InlineKeyboardButton(
+                            text="Support",
+                            url=f"https://t.me/Official_K_LegendBot")
                ],
                [
                         InlineKeyboardButton(
-                            text="𝐆𝐫𝐨𝐮𝐩⭐",
+                            text="🔰 Help 🔰",
                             url=f"https://t.me/Legend_K_Userbot")
                    
                 ]
@@ -313,21 +317,21 @@ async def play(_, message: Message):
             [
                 [
                     InlineKeyboardButton(
-                            text="𝐂𝐡𝐚𝐧𝐧𝐞𝐥📡",
-                            url=f"https://t.me/Official_K_LegendBot")
-               ],
-               [
-                    InlineKeyboardButton(
-                            text="Dhruba",
+                            text="💝 Owner 💝",
                             url=f"https://t.me/DhrubaXD"),
                             
                     InlineKeyboardButton(
-                            text="We are tough🥀",
-                            url=f"https://t.me/LB_OffTopic")
+                            text="👨‍💻 Assistant",
+                            url=f"https://t.me/{bot_username}")
+               ],
+                [
+                    InlineKeyboardButton(
+                            text="Support",
+                            url=f"https://t.me/Official_K_LegendBot")
                ],
                [
                         InlineKeyboardButton(
-                            text="𝐆𝐫𝐨𝐮𝐩⭐",
+                            text="🔰 Help 🔰",
                             url=f"https://t.me/Legend_K_Userbot")
                    
                 ]
@@ -367,10 +371,9 @@ async def play(_, message: Message):
         await message.reply_photo(
             photo="final.png",
             reply_markup=keyboard,
-            caption="**❰ 𝐌𝐮𝐬𝐢𝐜'𝐗 ❘ 😈 ❱ Now 😄 𝐏𝐥𝐚𝐲𝐢𝐧𝐠 📀 𝐀𝐭 🤟 `{}`...**".format(
+            caption="**▶️ Legendary Music Bot Is Playin Now In** ➡️ `{}`".format(
         message.chat.title
         ), )
 
     os.remove("final.png")
     return await lel.delete()
-    
