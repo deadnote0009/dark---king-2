@@ -10,38 +10,40 @@ from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton
 @Client.on_message(command("start") & filters.private & ~filters.edited)
 async def start_(client: Client, message: Message):
     await message.reply_photo(
-        photo=f"https://telegra.ph/file/8c3abf591121615cdef42.jpg",
-        caption=f"""**𝐓𝐡𝐢𝐬 𝐈𝐬 𝐀𝐝𝐯𝐚𝐧𝐜𝐞 🥀𝐓𝐞𝐥𝐞𝐠𝐫𝐚𝐦 𝐌𝐮𝐬𝐢𝐜 🎶 𝐁𝐨𝐭 𝐑𝐮𝐧 𝐎𝐧 𝐏𝐫𝐢𝐯𝐚𝐭𝐞 🥀 𝐕𝐩𝐬 💫𝐒𝐞𝐫𝐯𝐞𝐫 🌎 𝐅𝐞𝐞𝐥 ❤️ 𝐇𝐢𝐠𝐡 𝐐𝐮𝐚𝐥𝐢𝐭𝐲 𝐌𝐮𝐬𝐢𝐜 🎧 𝐈𝐧 𝐕𝐜 𝐃𝐞𝐯𝐞𝐥𝐨𝐩𝐞𝐝 𝐁𝐲 = [Dhruba'𝘅𝗗 🚬❤️](https://t.me/DhrubaXD)
-
-𝐂𝐫𝐞𝐚𝐭𝐨𝐫 :- [✨ 𝗠𝗿'Dhruba 🚬 💜](https://t.me/DhrubaXD)
-𝐒𝐮𝐩𝐩𝐨𝐫𝐭 :- [✨ Group ❤️🎸](https://t.me/Legend_K_Userbot)
-Off topic :- [✨  Tough 𝗖𝗹𝗮𝗻 🎧](https://t.me/LB_OffTopic)
-𝐒𝐨𝐮𝐫𝐜𝐞  :- [✨  𝗖𝗹𝗶𝗰𝗸 ☑️ 𝗥𝗲𝗽𝗼 🌍](https://github.com/LEGENDARY-OS/AIMusicX)
-Channel :- [✨ 𝗝𝗼𝗶𝗻 ❤️🥀](https://t.me/Official_K_LegendBot)
-
-𝐈𝐟 𝐘𝐨𝐮 𝐇𝐚𝐯𝐞 𝐀𝐧𝐲 𝐐𝐮𝐞𝐬𝐭𝐢𝐨𝐧𝐬 𝐀𝐧𝐝 𝐇𝐞𝐥𝐩 𝐓𝐡𝐞𝐧 𝐃𝐦 𝐌𝐲 𝐁𝐨𝐬𝐬 = [𝗠𝗿'Dhruba 🚬 ❤️](https://t.me/DhrubaXD)**""",
+        photo=f"https://telegra.ph/file/c70635cc28eec97a43f40.jpg",
+        caption=f"""**𝐓𝐡𝐢𝐬 𝐈𝐬 𝐀𝐝𝐯𝐚𝐧𝐜𝐞 🥀𝐓𝐞𝐥𝐞𝐠𝐫𝐚𝐦 𝐌𝐮𝐬𝐢𝐜 𝐁𝐨𝐭 𝐑𝐮𝐧 𝐎𝐧 𝐏𝐫𝐢𝐯𝐚𝐭𝐞 🥀 𝐕𝐩𝐬 💫𝐒𝐞𝐫𝐯𝐞𝐫 🌎 𝐅𝐞𝐞𝐥 ❤️ 𝐇𝐢𝐠𝐡 𝐐𝐮𝐚𝐥𝐢𝐭𝐲 𝐌𝐮𝐬𝐢𝐜 🎧 𝐈𝐧 𝐕𝐜**""",
     reply_markup=InlineKeyboardMarkup(
             [
                 [
                     InlineKeyboardButton(
-                        "🥀 Jᴏɪɴ Hᴇʀᴇ & Sᴜᴘᴘᴏʀᴛ ✨", url=f"https://t.me/Legend_K_Userbot")
+                        "♥️ Creator ♥️", url=f"https://t.me/DhrubaXD")
+               ],
+                [
+                    InlineKeyboardButton(
+                        "Repo ✨", url=f"https://github.com/LEGENDARY-OS/MUSIC-BOT")
+               ], 
+                [
+                    InlineKeyboardButton(
+                        "👨‍💻 Support", url=f"https://t.me/Official_K_LegendBot")
+           
+                    InlineKeyboardButton(
+                        "💝 Help 💝", url=f"https://t.me/Legend_K_Userbot")
                 ]
                 
            ]
-        ),
-    )
+       )
     
 
 @Client.on_message(command(["repo"]) & filters.group & ~filters.edited)
 async def help(client: Client, message: Message):
     await message.reply_photo(
-        photo=f"https://telegra.ph/file/8c3abf591121615cdef42.jpg",
+        photo=f"https://telegra.ph/file/11a149401351a322dc1bc.jpg",
         caption=f"""""",
         reply_markup=InlineKeyboardMarkup(
             [
                 [
                     InlineKeyboardButton(
-                        "💥 Cʟɪᴄᴋ Mᴇ Tᴏ Gᴇᴛ Rᴇᴘᴏ 💞", url=f"https://github.com/LEGENDARY-OS/AIMusicX")
+                        "💥 Repo 💞", url=f"https://github.com/LEGENDARY-OS/MUSIC-BOT")
                 ]
             ]
         ),
