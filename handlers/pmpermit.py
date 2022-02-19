@@ -26,7 +26,6 @@ async def pmPermit(client: USER, message: Message):
                         InlineKeyboardButton(
                             text="⚜ Master ⚜",
                             url=f"https://t.me/{master_user}")
-                   
                     ]
                 ]
             )
