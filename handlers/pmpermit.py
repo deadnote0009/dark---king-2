@@ -22,18 +22,18 @@ async def pmPermit(client: USER, message: Message):
             chat_id = message.chat.id
             keyboard = InlineKeyboardMarkup(
                 [
-                   [
+                    [
                         InlineKeyboardButton(
                             text="⚜ Master ⚜",
                             url=f"https://t.me/{master_user}")
                    
+                    ]
                 ]
-            ]
-        )
+            )
             if chat_id in pchats:
                 return
             await message.reply_photo(
-                photo="https://telegra.ph/file/86336252ab3c5125c2a6b.jpg"
+                photo="https://telegra.ph/file/86336252ab3c5125c2a6b.jpg",
                 reply_markup=keyboard,
                 caption="This Is Music Bot Assistant If U Want To Talk With My Master Click Below",
             )
