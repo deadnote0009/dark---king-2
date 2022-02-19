@@ -23,7 +23,7 @@ from pytgcalls import StreamType
 from pytgcalls.types.input_stream import InputAudioStream
 from pytgcalls.types.input_stream import InputStream
 
-bot_username = os.environ.get("BOT_USERNAME", None)
+bot_username = os.environ.get("BOT_NAME", None)
 
 if "@" in bot_username:
     bot_username.replace("@", "")
@@ -75,13 +75,13 @@ async def generate_cover(requested_by, title, views, duration, thumbnail):
     img = Image.open("etc/final.png")
     draw = ImageDraw.Draw(img)
     font = ImageFont.truetype("etc/font.otf", 32)
-    draw.text((190, 550), f"Title: {title}", (255, 255, 255), font=font)
+    draw.text((190, 550), f"**Title:** {title}", (255, 255, 255), font=font)
     draw.text(
-(190, 590), f"Duration: {duration}", (255, 255, 255), font=font
+(190, 590), f"**Duration:** {duration}", (255, 255, 255), font=font
     )
-    draw.text((190, 630), f"Views: {views}", (255, 255, 255), font=font)
+    draw.text((190, 630), f"**Views:** {views}", (255, 255, 255), font=font)
     draw.text((190, 670),
- f"Added By: {requested_by}",
+ f"**Added By:** {requested_by}",
  (255, 255, 255),
  font=font,
     )
