@@ -22,7 +22,7 @@ def song(client, message):
     for i in message.command[1:]:
         query += ' ' + str(i)
     print(query)
-    m = message.reply("𝐅𝐢𝐧𝐝𝐢𝐧𝐠 💫 𝐓𝐡𝐞 𝐒𝐨𝐧𝐠 🎧 𝐅𝐫𝐨𝐦 Cool Legend ❤️ 𝐒𝐞𝐫𝐯𝐞𝐫 🌎...")
+    m = message.reply("Finding The song From YouTube\nWait a Minute")
     ydl_opts = {"format": "bestaudio[ext=m4a]"}
     try:
         results = YoutubeSearch(query, max_results=1).to_dict()
@@ -45,13 +45,13 @@ def song(client, message):
         )
         print(str(e))
         return
-    m.edit("𝐃𝐨𝐰𝐧𝐥𝐨𝐚𝐝 ✨ 𝐒𝐨𝐧𝐠 🎸 𝐅𝐫𝐨𝐦 Legend 🥀 𝐒𝐞𝐫𝐯𝐞𝐫 🌎...")
+    m.edit("𝐃𝐨𝐰𝐧𝐥𝐨𝐚𝐝 ✨ 𝐒𝐨𝐧𝐠")
     try:
         with yt_dlp.YoutubeDL(ydl_opts) as ydl:
             info_dict = ydl.extract_info(link, download=False)
             audio_file = ydl.prepare_filename(info_dict)
             ydl.process_info(info_dict)
-        rep = "**🎵 𝐔𝐩𝐥𝐨𝐚𝐝𝐞𝐝 𝐁𝐲 :- ✨ [❛-𝐌𝐫'Dhruba 🚬](https://t.me/DhrubaXD) ❤️**"
+        rep = "**🔰 Owner :- ✨ [Dhruba](https://t.me/DhrubaXD) ❤️**\n**Repo ~** [Repo](https://github.com/LEGENDARY-OS/MUSIC-BOT)"
         secmul, dur, dur_arr = 1, 0, duration.split(':')
         for i in range(len(dur_arr)-1, -1, -1):
             dur += (int(dur_arr[i]) * secmul)
