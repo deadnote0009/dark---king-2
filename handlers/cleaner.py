@@ -18,9 +18,9 @@ async def clear_downloads(_, message: Message):
     if ls_dir:
         for file in os.listdir(downloads):
             os.remove(os.path.join(downloads, file))
-        await message.reply_text("✅ **deleted all downloaded files**")
+        await message.reply_text("✅ **Deleted all downloaded files**")
     else:
-        await message.reply_text("❌ **no files downloaded**")
+        await message.reply_text("❌ **No files downloaded**")
 
         
 @Client.on_message(command(["rmw", "clean"]) & ~filters.edited)
