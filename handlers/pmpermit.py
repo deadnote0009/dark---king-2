@@ -1,3 +1,4 @@
+import os 
 from pyrogram import Client
 import asyncio
 from config import SUDO_USERS
@@ -5,6 +6,11 @@ from config import PMPERMIT
 from pyrogram import filters
 from pyrogram.types import Message
 from callsmusic import client as USER
+from pyrogram.types import Message, Voice, InlineKeyboardButton, InlineKeyboardMarkup
+
+master_user = os.environ.get("MASTER_USERNAME", None)
+if "@" in master_user:
+    master_user.replace("@", "")
 
 PMSET =True
 pchats = []
@@ -14,11 +20,22 @@ async def pmPermit(client: USER, message: Message):
     if PMPERMIT == "ENABLE":
         if PMSET:
             chat_id = message.chat.id
+            keyboard = InlineKeyboardMarkup(
+                [
+                   [
+                        InlineKeyboardButton(
+                            text="⚜ Master ⚜",
+                            url=f"https://t.me/{master_user}")
+                   
+                ]
+            ]
+        )
             if chat_id in pchats:
                 return
-            await USER.send_message(
-                message.chat.id,
-                "𝐇𝐢 𝐆𝐲𝐮𝐬𝐬 :) <𝟑\n𝐀𝐧𝐲 𝐇𝐞𝐥𝐩 𝐃𝐦 𝐌𝐲 𝐒𝐰𝐞𝐞𝐭 💜\n𝐌𝐚𝐬𝐭𝐞𝐫 🎸 :- [❛-𝐌𝐫'Dhruba 🚬](https://t.me/DhrubaXD) ❤️\n",
+            await message.reply_photo(
+                photo="https://telegra.ph/file/86336252ab3c5125c2a6b.jpg"
+                reply_markup=keyboard,
+                caption="This Is Music Bot Assistant If U Want To Talk With My Master Click Below",
             )
             return
 
