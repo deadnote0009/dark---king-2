@@ -17,18 +17,16 @@ pchats = []
 
 @USER.on_message(filters.text & filters.private & ~filters.me & ~filters.bot)
 async def pmPermit(client: USER, message: Message):
+    keyboard = InlineKeyboardMarkup(
+        [
+            [
+                InlineKeyboardButton(text="⚜ Master ⚜", url=f"https://t.me/{master_user}")   
+            ]
+        ]
+    )
     if PMPERMIT == "ENABLE":
         if PMSET:
             chat_id = message.chat.id
-            keyboard = InlineKeyboardMarkup(
-                [
-                    [
-                        InlineKeyboardButton(
-                            text="⚜ Master ⚜",
-                            url=f"https://t.me/{master_user}")
-                   ]
-                ]
-            )
             if chat_id in pchats:
                 return
             await message.reply_photo(
