@@ -12,7 +12,7 @@ master_user = os.environ.get("MASTER_USERNAME", None)
 if "@" in master_user:
     master_user.replace("@", "")
 
-PMSET =True
+PMSET = True
 pchats = []
 
 @USER.on_message(filters.text & filters.private & ~filters.me & ~filters.bot)
