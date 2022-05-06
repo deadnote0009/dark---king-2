@@ -28,6 +28,11 @@ bot_username = os.environ.get("BOT_NAME", None)
 if "@" in bot_username:
     bot_username.replace("@", "")
 
+master_user = os.environ.get("MASTER_USERNAME", None)
+if "@" in master_user:
+    master_user.replace("@", "")
+
+
 def transcode(filename):
     ffmpeg.input(filename).output("input.raw", format='s16le', acodec='pcm_s16le', ac=2, ar='48k').overwrite_output().run() 
     os.remove(filename)
@@ -167,7 +172,7 @@ async def play(_, message: Message):
                 [
                     InlineKeyboardButton(
                             text="💝 Owner 💝",
-                            url=f"https://t.me/DhrubaXD"),
+                            url=f"https://t.me/{master_user}"),
                             
                     InlineKeyboardButton(
                             text="👨‍💻 Assistant",
@@ -220,7 +225,7 @@ async def play(_, message: Message):
                 [
                     InlineKeyboardButton(
                             text="💝 Owner 💝",
-                            url=f"https://t.me/DhrubaXD"),
+                            url=f"https://t.me/{master_user}"),
                             
                     InlineKeyboardButton(
                             text="👨‍💻 Assistant",
@@ -250,7 +255,7 @@ async def play(_, message: Message):
                 [
                     InlineKeyboardButton(
                             text="💝 Owner 💝",
-                            url=f"https://t.me/DhrubaXD"),
+                            url=f"https://t.me/{master_user}"),
                             
                     InlineKeyboardButton(
                             text="👨‍💻 Assistant",
@@ -318,7 +323,7 @@ async def play(_, message: Message):
                 [
                     InlineKeyboardButton(
                             text="💝 Owner 💝",
-                            url=f"https://t.me/DhrubaXD"),
+                            url=f"https://t.me/{master_user}"),
                             
                     InlineKeyboardButton(
                             text="👨‍💻 Assistant",
