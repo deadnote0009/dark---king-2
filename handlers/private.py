@@ -5,7 +5,10 @@ from helpers.filters import command
 from pyrogram import Client, filters
 from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton
 
+master_user = os.environ.get("MASTER_USERNAME", None)
 
+if "@" in master_user: 
+    master_user.replace("@", "")
 
 @Client.on_message(command("start") & filters.private & ~filters.edited)
 async def start_(client: Client, message: Message):
@@ -16,7 +19,7 @@ async def start_(client: Client, message: Message):
             [
                 [
                     InlineKeyboardButton(
-                        "♥️ Creator ♥️", url=f"https://t.me/DhrubaXD")
+                        "♥️ Owner ♥️", url=f"https://t.me/{master_user}")
                ],
                 [
                     InlineKeyboardButton(
@@ -24,11 +27,11 @@ async def start_(client: Client, message: Message):
                ], 
                 [
                     InlineKeyboardButton(
-                        "👨‍💻 Support", url=f"https://t.me/Official_K_LegendBot")
+                        "👨‍💻 Support", url=f"https://t.me/LegendBot_AI")
                ],
                 [
                     InlineKeyboardButton(
-                        "💝 Help 💝", url=f"https://t.me/Legend_K_Userbot")
+                        "💝 Help 💝", url=f"https://t.me/LegendBot_OP")
                 ]
                 
            ]
