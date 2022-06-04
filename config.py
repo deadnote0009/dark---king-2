@@ -5,8 +5,8 @@ load_dotenv()
 que = {}
 admins = {}
 
-API_ID = int(getenv("API_ID", "4110592"))
-API_HASH = getenv("API_HASH", "aa7c849566922168031b95212860ede0")
+API_ID = int(getenv("API_ID", "15235059"))
+API_HASH = getenv("API_HASH", "352269b9e97005ffbe7f577dd89911e6")
 BOT_TOKEN = getenv("BOT_TOKEN","1917637742:AAF61TOx72pQEap0aHp56t9yQL5VUl-C7R0")
 BOT_NAME = getenv("BOT_NAME","LegendAry Music🚩")
 DURATION_LIMIT = int(getenv("DURATION_LIMIT", "120"))
