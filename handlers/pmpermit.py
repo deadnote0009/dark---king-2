@@ -31,7 +31,7 @@ async def pmPermit(client: USER, message: Message):
             await message.reply_photo(
                 photo="https://telegra.ph/file/86336252ab3c5125c2a6b.jpg",
                 reply_markup=keyboard,
-                caption="This Is Music Bot Assistant If U Want To Talk With My Master Click Below",
+                caption="This Is Music Bot Assistant If U Want To Talk With My Master kindly send a message at @Dhruba_XD",
             )
             return
 
