@@ -19,7 +19,7 @@ async def start_(client: Client, message: Message):
             [
                 [
                     InlineKeyboardButton(
-                        "♥️ Owner ♥️", url=f"https://t.me/{master_user}")
+                        "♥️ Owner ♥️", url=f"https://t.me/{MASTER_USERNAME}")
                ],
                 [
                     InlineKeyboardButton(
