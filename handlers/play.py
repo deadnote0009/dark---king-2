@@ -25,12 +25,11 @@ from pytgcalls.types.input_stream import InputStream
 
 bot_username = os.environ.get("BOT_NAME", None)
 
-if "@" in bot_username:
-    bot_username.replace("@", "")
+
 
 master_user = os.environ.get("MASTER_USERNAME", None)
-if "@" in master_user:
-    master_user.replace("@", "")
+
+    
 
 
 def transcode(filename):
