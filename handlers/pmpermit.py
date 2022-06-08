@@ -9,8 +9,7 @@ from callsmusic import client as USER
 from pyrogram.types import Message, Voice, InlineKeyboardButton, InlineKeyboardMarkup
 
 master_user = os.environ.get("MASTER_USERNAME", None)
-if "@" in master_user:
-    master_user.replace("@", "")
+
 
 PMSET = True
 pchats = []
