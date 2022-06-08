@@ -19,7 +19,7 @@ async def pmPermit(client: USER, message: Message):
     keyboard = InlineKeyboardMarkup(
         [
             [
-                InlineKeyboardButton(text="⚜ Master ⚜", url=f"https://t.me/{master_user}")   
+                InlineKeyboardButton(text="⚜ Master ⚜", url=f"https://t.me/{MASTER_USERNAME}")   
             ]
         ]
     )
