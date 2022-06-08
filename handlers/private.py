@@ -8,8 +8,7 @@ import os
 
 master_user = os.environ.get("MASTER_USERNAME", None)
 
-if "@" in master_user: 
-    master_user.replace("@", "")
+
 
 @Client.on_message(command("start") & filters.private & ~filters.edited)
 async def start_(client: Client, message: Message):
