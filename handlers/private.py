@@ -19,19 +19,19 @@ async def start_(client: Client, message: Message):
             [
                 [
                     InlineKeyboardButton(
-                        "♥️ Owner ♥️", url=f"https://t.me/DhrubaXD")
+                        "♥️ Owner ♥️", url=f"https://t.me/itzyournil")
                ],
                 [
                     InlineKeyboardButton(
-                        "Repo ✨", url=f"https://github.com/LEGENDARY-OS/MUSIC-BOT")
+                        "Repo ✨", url=f"https://pbs.twimg.com/profile_images/1258746720999129100/cG4GzTuP_400x400.jpg")
                ], 
                 [
                     InlineKeyboardButton(
-                        "👨‍💻 Support", url=f"https://t.me/LegendBot_AI")
+                        "👨‍💻 Support", url=f"https://t.me/itzyournil")
                ],
                 [
                     InlineKeyboardButton(
-                        "💝 Help 💝", url=f"https://t.me/LegendBot_OP")
+                        "💝 Help 💝", url=f"https://t.me/itzyournil")
                 ]
                 
            ]
@@ -47,7 +47,7 @@ async def help(client: Client, message: Message):
             [
                 [
                     InlineKeyboardButton(
-                        "💥 Repo 💞", url=f"https://github.com/LEGENDARY-OS/MUSIC-BOT")
+                        "💥 Repo 💞", url=f"https://pbs.twimg.com/profile_images/1258746720999129100/cG4GzTuP_400x400.jpg")
                 ]
             ]
         ),
