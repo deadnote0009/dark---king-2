@@ -143,7 +143,7 @@ async def play(_, message: Message):
         await USER.get_chat(chid)
     except:
         await lel.edit(
-            f"<i>Hey {user.first_name}, 𝐀𝐬𝐬𝐢𝐬𝐭𝐚𝐧𝐭 🎸 𝐔𝐬𝐞𝐫𝐁𝐨𝐭 𝐈𝐬 𝐍𝐨𝐭 𝐈𝐧 𝐓𝐡𝐢𝐬 𝐂𝐡𝐚𝐭' 𝐀𝐬𝐤 𝐀𝐝𝐦𝐢𝐧 😎 𝐓𝐨 𝐒𝐞𝐧𝐝 /𝐏𝐥𝐚𝐲 𝐂𝐨𝐦𝐦𝐚𝐧𝐝 😎 𝐅𝐨𝐫 𝐅𝐢𝐫𝐬𝐭 𝐓𝐢𝐦𝐞 𝐓𝐨 𝐀𝐝𝐝 𝐈𝐭 𝐀𝐧𝐲 𝐇𝐞𝐥𝐩 𝐃𝐦 :- ✨ [❛-𝐌𝐫'Dhruba 🚬](https://t.me/DhrubaXD) ❤️🥀 </i>")
+            f"<i>Hey {user.first_name}, 𝐀𝐬𝐬𝐢𝐬𝐭𝐚𝐧𝐭 🎸 𝐔𝐬𝐞𝐫𝐁𝐨𝐭 𝐈𝐬 𝐍𝐨𝐭 𝐈𝐧 𝐓𝐡𝐢𝐬 𝐂𝐡𝐚𝐭' 𝐀𝐬𝐤 𝐀𝐝𝐦𝐢𝐧 😎 𝐓𝐨 𝐒𝐞𝐧𝐝 /𝐏𝐥𝐚𝐲 𝐂𝐨𝐦𝐦𝐚𝐧𝐝 😎 𝐅𝐨𝐫 𝐅𝐢𝐫𝐬𝐭 𝐓𝐢𝐦𝐞 𝐓𝐨 𝐀𝐝𝐝 𝐈𝐭 𝐀𝐧𝐲 𝐇𝐞𝐥𝐩 𝐃𝐦 :- ✨ [❛DARK NIL 🚬](https://t.me/itzyournil) ❤️🥀 </i>")
         return
     
     audio = (
@@ -180,12 +180,12 @@ async def play(_, message: Message):
                 [
                     InlineKeyboardButton(
                             text="Support",
-                            url=f"https://t.me/Official_K_LegendBot")
+                            url=f"https://t.me/itzyournil")
                ],
                [
                         InlineKeyboardButton(
                             text="🔰 Help 🔰",
-                            url=f"https://t.me/Legend_K_Userbot")
+                            url=f"https://t.me/itzyournil")
                    
                 ]
             ]
@@ -238,7 +238,7 @@ async def play(_, message: Message):
                [
                         InlineKeyboardButton(
                             text="🔰 Help 🔰",
-                            url=f"https://t.me/Legend_K_Userbot")
+                            url=f"https://t.me/itzyournil")
                    
                 ]
             ]
@@ -263,12 +263,12 @@ async def play(_, message: Message):
                 [
                     InlineKeyboardButton(
                             text="Support",
-                            url=f"https://t.me/Official_K_LegendBot")
+                            url=f"https://t.me/itzyournil")
                ],
                [
                         InlineKeyboardButton(
                             text="🔰 Help 🔰",
-                            url=f"https://t.me/Legend_K_Userbot")
+                            url=f"https://t.me/itzyournil")
                    
                 ]
             ]
@@ -331,12 +331,12 @@ async def play(_, message: Message):
                 [
                     InlineKeyboardButton(
                             text="Support",
-                            url=f"https://t.me/Official_K_LegendBot")
+                            url=f"https://t.me/itzyournil")
                ],
                [
                         InlineKeyboardButton(
                             text="🔰 Help 🔰",
-                            url=f"https://t.me/Legend_K_Userbot")
+                            url=f"https://t.me/itzyournil")
                    
                 ]
             ]
